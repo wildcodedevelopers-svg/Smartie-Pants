@@ -61,8 +61,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100% !important;
-      height: 100% !important;
+      width: 100vw;
+      height: 100dvh; /* Updated for full screen on mobile/desktop */
       z-index: -1;
       overflow: hidden;
       pointer-events: none;
@@ -73,10 +73,11 @@
       top: 50%;
       left: 50%;
       width: 100vw;
-      height: 56.25vw; /* Given 16:9 Aspect Ratio */
-      min-height: 100vh;
-      min-width: 177.77vh;
+      height: 100dvh;
       transform: translate(-50%, -50%);
+      aspect-ratio: 16 / 9;
+      min-width: 177.78dvh;
+      min-height: 56.25vw;
       object-fit: cover;
       filter: blur(4px) brightness(0.45);
     }
